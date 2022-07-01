@@ -12,5 +12,5 @@ interface Dao {
     fun insertRecord(forecastData: ForecastData)
 
     @Query("SELECT * FROM forecast_table")
-    fun getAllRecords(): List<ForecastData>
+    fun getAllRecords(): Flow<List<ForecastData>>
 }
