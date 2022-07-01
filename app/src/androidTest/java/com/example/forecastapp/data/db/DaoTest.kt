@@ -40,7 +40,7 @@ class DaoTest {
         val forecastData = ForecastData(12512, "miasto", 30f, 67f, 1014f)
         dao.insertRecord(forecastData)
 
-        val allRecords = dao.getAllRecords().getOrAwaitValue()
-        assertThat(allRecords).contains(forecastData)
+        val allRecords = dao.getAllRecords()
+        assertThat(allRecords.contains(forecastData)).isTrue()
     }
 }

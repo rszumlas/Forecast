@@ -12,5 +12,5 @@ interface Dao {
     fun insertRecord(forecastData: ForecastData)
 
     @Query("SELECT * FROM forecast_table")
-    fun getAllRecords(): LiveData<List<ForecastData>>
+    fun getAllRecords(): List<ForecastData>
 }

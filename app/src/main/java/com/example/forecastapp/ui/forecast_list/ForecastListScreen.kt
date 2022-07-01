@@ -19,7 +19,7 @@ fun ForecastListScreen (
     navController: NavController,
     viewmodel: MainActivityViewModel = hiltViewModel()
 ) {
-    val forecasts = viewmodel.forecasts.collectAsState(initial = emptyList())
+    val forecasts = viewmodel.forecasts
     val scaffoldState = rememberScaffoldState()
 
     Scaffold (
@@ -28,7 +28,7 @@ fun ForecastListScreen (
         LazyColumn(
             modifier = Modifier.fillMaxSize()
         ) {
-            items(forecasts.value) { forecastData ->
+            items(forecasts) { forecastData ->
                 forecastItem(
                     forecastData = forecastData,
                     modifier = Modifier.padding(16.dp)

@@ -14,6 +14,6 @@ interface ForecastRepo {
     // ROOM
     suspend fun insertRecord(forecastData: ForecastData)
 
-    fun getAllRecords(): LiveData<List<ForecastData>>
+    fun getAllRecords(): List<ForecastData>
 
 }
