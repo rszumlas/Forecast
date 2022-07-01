@@ -38,4 +38,7 @@ class ForecastRepoImpl @Inject constructor(
     override fun getAllRecords(): Flow<List<ForecastData>> =
         dao.getAllRecords()
 
+    override fun getSpecificDbRecord(stacja: String): ForecastData =
+        dao.getSpecificDBRecord(stacja)
+
 }

@@ -10,10 +10,11 @@ interface ForecastRepo {
     // API
     suspend fun getRecord(station: String): Response<ForecastData>
 
-
     // ROOM
     suspend fun insertRecord(forecastData: ForecastData)
 
     fun getAllRecords(): Flow<List<ForecastData>>
+
+    fun getSpecificDbRecord(stacja: String): ForecastData
 
 }

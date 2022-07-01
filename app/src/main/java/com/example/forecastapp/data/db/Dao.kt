@@ -13,4 +13,7 @@ interface Dao {
 
     @Query("SELECT * FROM forecast_table")
     fun getAllRecords(): Flow<List<ForecastData>>
+
+    @Query("SELECT * FROM forecast_table WHERE stacja = :stacja")
+    fun getSpecificDbRecord(stacja: String): ForecastData
 }
