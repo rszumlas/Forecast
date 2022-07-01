@@ -39,6 +39,6 @@ class ForecastRepoImpl @Inject constructor(
         dao.getAllRecords()
 
     override fun getSpecificDbRecord(stacja: String): ForecastData =
-        dao.getSpecificDBRecord(stacja)
+        dao.getSpecificDbRecord(stacja)
 
 }
